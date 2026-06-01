@@ -1,91 +1,110 @@
-**ML-Visualizer: Machine Learning Visualization Platform
-A full-stack educational platform that visually demonstrates the Machine Learning workflow step-by-step. Upload a dataset, clean it, train models, visualize results, and test your knowledge, all through an interactive UI.**
+# ML-Visualizer — Machine Learning Visualization Platform
 
-🚀 **What It Does**
+A full-stack educational platform that visually demonstrates the Machine Learning workflow step-by-step. Upload a dataset, clean it, train models, and visualize results — all through an interactive UI.
 
--Upload CSV datasets and auto-detect classification vs. regression tasks.
+---
 
--Profile datasets with interactive charts and comprehensive statistics.
+## What It Does
 
--Apply preprocessing steps including missing value imputation, encoding, and feature scaling.
+- Upload CSV datasets and auto-detect classification vs regression
+- Profile datasets with charts and statistics
+- Apply preprocessing steps (missing values, encoding, scaling)
+- Split data into train/test sets
+- Train ML models and evaluate with metrics
+- Compare multiple models side by side
+- Download experiment reports as HTML
 
--Split data into customizable train/test sets.
+---
 
--Train ML models and evaluate them using standard industry metrics.
+## Tech Stack
 
--Compare multiple models side-by-side to determine the best performer.
+### Frontend
+- React.js — UI framework
+- Tailwind CSS — Styling
+- Recharts — Data visualization charts
+- Axios — API requests
+- React Router — Page navigation
+- Context API — Global state management
+- React Hot Toast — Notifications
 
--Test your knowledge with an Interactive Quiz covering core ML concepts and workflow terminology.
+### Backend
+- Node.js — Runtime
+- Express.js — REST API server
+- Multer — File upload handling
+- csv-parser — CSV file reading
+- JWT — Authentication tokens
+- bcryptjs — Password hashing
+- dotenv — Environment variables
 
--Download experiment reports as HTML for offline viewing and sharing.
+### ML Service
+- Python — Language
+- FastAPI — ML REST API
+- scikit-learn — ML algorithms and metrics
+- pandas — Data manipulation
+- numpy — Numerical computation
+- uvicorn — Server runner
 
-🛠️ **Tech Stack**
+---
 
-**Frontend**
+## ML Algorithms Supported
 
-React.js — UI framework
+| Algorithm | Type |
+|---|---|
+| Decision Tree | Classification |
+| K-Nearest Neighbors | Classification |
+| Random Forest | Classification |
+| Linear Regression | Regression |
 
-Tailwind CSS — Styling
+---
 
-Recharts — Data visualization charts
+### Prerequisites
+- Node.js (v16 or above)
+- Python (v3.8 or above)
+- npm
+- pip
 
-Axios — API requests
+---
 
-React Router — Page navigation
+## Running the project
 
-Context API — Global state management
+Open three separate terminals:
 
-React Hot Toast — Notifications
+```bash
+# Terminal 1 — Backend
+cd backend && node server.js
 
-**Backend**
+# Terminal 2 — ML Service
+cd ml-service && python main.py
 
-Node.js — Runtime
+# Terminal 3 — Frontend
+cd frontend && npm start
+```
 
-Express.js — REST API server
+---
 
-Multer — File upload handling
+## ML Pipeline Flow
 
-csv-parser — CSV file reading
-
-JWT — Authentication tokens
-
-bcryptjs — Password hashing
-
-dotenv — Environment variables
-
-**ML Service**
-
-Python — Language
-
-FastAPI — ML REST API
-
-scikit-learn — ML algorithms and metrics
-
-pandas — Data manipulation
-
-numpy — Numerical computation
-
-🌊 ML Pipeline Flow
-
+```
 Upload CSV
+    ↓
+Profile Dataset (stats, charts)
+    ↓
+Preprocess Data (clean, encode, scale)
+    ↓
+Train / Test Split (70-30, 80-20, 90-10)
+    ↓
+Train Model (Decision Tree / KNN / Random Forest / Linear Regression)
+    ↓
+View Metrics (Accuracy, Precision, Recall, F1, Confusion Matrix)
+    ↓
+Compare Models
+    ↓
+Download Report
+```
 
-↓ Profile Dataset (stats, charts)
-
-↓ Preprocess Data (clean, encode, scale)
-
-↓ Train / Test Split (70-30, 80-20, 90-10)
-
-↓ Train Model (Decision Tree / KNN / Random Forest / Linear Regression)
-
-↓ View Metrics (Accuracy, Precision, Recall, F1, Confusion Matrix)
-
-↓ Compare Models
-
-↓ Download Report
-
-Note: At any point, users can navigate to the Interactive Quiz to test their understanding of the steps they are performing in the pipeline.
-
-Limits: Currently supports CSV files up to 50MB.
+---
 
 
-uvicorn — Server runner
+## License
+
+MIT License — free to use and modify.
